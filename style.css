@@ -3,10 +3,12 @@ html, body {
     padding: 0;
   }
   canvas{
-    margin-left: 25%;
+    border: 2px solid white;
+
+    /*margin-left: 25%;
     margin-right: 25%;
     margin-top: 100px;
-    border: 2px solid black;
+    border: 2px solid black;*/
   }
   
   

@@ -3,9 +3,13 @@ var drawing = [];
 var currentPath = [];
 
 function setup(){
-    var canvas = createCanvas(600,500);
+    var canvas = createCanvas(1000,500);
     canvas.mousePressed(startPath);
     canvas.mouseReleased(endPath);
+
+     var clearButton = select('#clearButton');
+    clearButton.mousePressed(clearDrawing);
+
 }
 function startPath(){
     currentPath = [];
@@ -24,7 +28,7 @@ function draw(){
         currentPath.push(point);
     }
     noFill("red");
-    stroke("red");
+    stroke(255);
     strokeWeight(4);
     
     for(var i = 0; i< drawing.length; i++){
@@ -37,3 +41,8 @@ function draw(){
     }
     
 }
+function clearDrawing() {
+    drawing = [];
+}
+
+
